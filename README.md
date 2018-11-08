@@ -30,7 +30,7 @@
 ```
 ###  5、配置文件
 ```
-    config/mipush.php
+    config/dingtalk.php
 ```
 # 实例
 
