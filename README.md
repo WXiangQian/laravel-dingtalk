@@ -1,4 +1,9 @@
 # laravel-DingTalk是基于laravel5.5开发的钉钉机器人
+```
+当前自定义机器人支持
+文本（text）、链接（link）、markdown（markdown）三种消息类型
+大家可以根据自己的使用场景选择合适的消息类型，达到最好的展示样式
+```
 
 # 安装方法
 ### 1、安装
@@ -22,15 +27,13 @@
 \Qian\DingTalk\DingTalkServiceProvider::class
 ```
    
-###  3、执行命令
+###  3、执行命令生成配置文件
 
 ```
-    php artisan config:cache 清空配置缓存 
-    php artisan vendor:publish 
+   php artisan vendor:publish 
 ```
-###  5、配置文件
 ```
-    config/dingtalk.php
+   则生成 config/dingtalk.php
 ```
 # 实例
 
@@ -54,6 +57,14 @@ $data = $message->link($title, $text, $messageUrl, $picUrl);
 $res = $DingTalk->send($data);
 echo $res;
 ```
-
-
-#### 暂时实现两种发送，后续会逐个完善，如有需要，欢迎大家提交问题
+### 实现Markdown发送
+```
+$DingTalk = new DingTalk();
+$message = new Message();
+$title = '北京天气MD';
+$text = '# laravel-DingTalk是基于laravel5.5开发的钉钉机器人';
+$data = $message->markdown($title, $text);
+$res = $DingTalk->send($data);
+echo $res;
+```
+####  如满足您的需求，请留下来点个赞吧
