@@ -1,4 +1,4 @@
-# laravel-DingTalk基于laravel5.5的小米推送
+# laravel-DingTalk是基于laravel5.5开发的钉钉机器人
 
 # 安装方法
 ### 1、安装
