@@ -37,12 +37,17 @@
 ```
 # 实例
 
+```
+$token可以去调用dingtalk.php里面的talk中的token
+因为有时候一个项目会需要配置多个群的通知
+所以决定修改的更灵活一点
+```
 ### 实现Text发送
 ```
 $DingTalk = new DingTalk();
 $message = new Message();
 $data = $message->text('测试text类型');
-$res = $DingTalk->send($data);
+$res = $DingTalk->send($token,$data);
 echo $res;
 ```
 ### 实现Link发送
@@ -54,7 +59,7 @@ $text = '测试link类型text';
 $messageUrl = 'https://www.baidu.com/';
 $picUrl = '';
 $data = $message->link($title, $text, $messageUrl, $picUrl);
-$res = $DingTalk->send($data);
+$res = $DingTalk->send($token,$data);
 echo $res;
 ```
 ### 实现Markdown发送
@@ -64,7 +69,7 @@ $message = new Message();
 $title = '北京天气MD';
 $text = '# laravel-DingTalk是基于laravel5.5开发的钉钉机器人';
 $data = $message->markdown($title, $text);
-$res = $DingTalk->send($data);
+$res = $DingTalk->send($token,$data);
 echo $res;
 ```
 ####  如满足您的需求，请留下来点个赞吧
