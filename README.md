@@ -8,13 +8,13 @@
 # 安装方法
 ### 1、安装
 ```
-    composer require WXiangQian/laravel-DingTalk    
+    composer require wxiangqian/laravel-dingtalk
     composer install
 ```   
 或
 ```  
-    composer.json 中添加 "WXiangQian/laravel-DingTalk": "^1.0"  
-    composer update 
+    composer.json 中添加 "wxiangqian/laravel-dingtalk": "^1.2.0"  
+    composer install 
 ```
 1.0为版本号，可替换
 如果无法安装 请执行一下 composer update nothing 然后 composer update
